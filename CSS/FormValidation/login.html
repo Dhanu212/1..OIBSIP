@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>User Login</h2>
+        <form>
+            <input type="text" name="UserName" id="UserName" placeholder="UserName Name / Email" required>
+            <input type="password" name="password" id="password"placeholder="password" required>
+            <button type="submit">Login</button>
+
+        </form>
+
+    </div>
+    <script>
+        let form = document.querySelector('form');
+
+        form.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        let UserName = document.getElementById("UserName").value;
+        let password = document.getElementById('password').value;
+        console.log(UserName,password);
+        let lname = localStorage.getItem('UserName');
+        let lpwd = localStorage.getItem('password');
+        if(UserName == lname && password == lpwd ){
+            alert('login successful')
+            open("./home.html")
+        }
+        else if(UserName != lname && password != lpwd){
+            alert("Invalid Credentials");
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="/CSS/cal.css">
+</head>
+<body>
+    <script>
+        var aud1=new Audio();
+        aud1.src="./indexMedia/buttonClick.mp3"
+        // aud src="./indexMedia/mouseClick.mp3"
+        function buttonclick(){
+            aud1.play();
+        }
+        var aud2=new Audio();
+        aud2.src="./indexMedia/mouseClick.mp3"
+        function equclick(){
+            aud2.play();
+        }
+    </script>
+    <div id="container">
+        <form name="cform">
+            <input type="text" id="display" name="answer">
+            <input class="button" type="button" value="1"
+            onclick="cform.answer.value+='1',buttonclick()">
+            <input class="button" type="button" value="2"
+            onclick="cform.answer.value+='2' ,buttonclick()" >
+            <input class="button" type="button" value="3"
+            onclick="cform.answer.value+='3',buttonclick()">
+            <input class="button" type="button" value="+"
+            onclick="cform.answer.value+='+',buttonclick()">
+            <input class="button" type="button" value="4"
+            onclick="cform.answer.value+='4',buttonclick()">
+            <input class="button" type="button" value="5"
+            onclick="cform.answer.value+='5',buttonclick()">
+            <input class="button" type="button" value="6"
+            onclick="cform.answer.value+='6',buttonclick()">
+            
+            <input class="button" type="button" value="-"
+            onclick="cform.answer.value+='-',buttonclick()">
+            <input class="button" type="button" value="7"
+            onclick="cform.answer.value+='7',buttonclick()">
+            <input class="button" type="button" value="8"
+            onclick="cform.answer.value+='8',buttonclick()">
+            <input class="button" type="button" value="9"
+            onclick="cform.answer.value+='9',buttonclick()">
+            <input class="button" type="button" value="*"
+            onclick="cform.answer.value+='*',buttonclick()">
+            <input class="button" type="button" value="/"
+            onclick="cform.answer.value+='/',buttonclick()">
+            <input class="button" type="button" value="0"
+            onclick="cform.answer.value+='0',buttonclick()">
+            <input class="button" type="button" value="."
+            onclick="cform.answer.value+='.',buttonclick()">
+            <input class="button" type="button" value="%"
+            onclick="cform.answer.value+='%',buttonclick()">
+            <input  type="button" id="clr" value="Clear"
+            onclick="cform.answer.value=' ',equclick()">
+            <input type="button" id="equ" value="="
+            onclick="cform.answer.value=eval(cform.answer.value),equclick()">
+        </form>
+    </div>
+</body>
+</html>

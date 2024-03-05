@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" name="name" id="name" placeholder="User Name / Email" required>
+            <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+            <input type="submit" name="btn" id="btn" value="SignUp">
+
+        </form>
+
+    </div>
+    <script>
+        let form = document.querySelector("form");
+        let User = document.getElementById("name");
+        let pwd = document.getElementById('pwd');
+
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+            if( user != '' && pwd != ''){
+                localStorage.setItem('UserName',user.value);
+                localStorage.setItem('password',pwd.value);
+                open('./login.html');
+            }else{
+                alert("Registation failed")
+
+            }
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+}
+.msg{
+    color:red;
+    font-family: 'Dancing Script', cursive;;
+    font-size: 100px;
+    font-weight: bolder;
+    text-shadow: 4px 4px 20px grey;
+    position: absolute;
+    top: 40X;
+    left: 25X;
+}
+@keyframes message {
+    0%{
+        opacity: 0;
+        margin-top: 0;
+        color: blue;
+    }
+    100%{
+
+        opacity: 1;
+        margin-top:  -150px;
+        color: blueviolet;
+    }
+}
+.year{
+    color: white;
+    position: absolute;
+    top: 300px;
+    width: 100%;
+    text-align: center;
+}
+.year>span{
+    font-size:150px ;
+    font-weight: 700;
+    letter-spacing: -12px;
+}
+.old{
+    color: beige;
+    position: absolute;
+    top: 0px;
+    /*margin-left: -80px;*/
+    animation:old_animation 2s linear 2s normal ;
+}
+@keyframes old_animation{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: -600px;
+    }
+}
+.first_year{
+    margin-right: 100px;
+}
+.new{
+    position: absolute;
+    right: -100px;
+    animation: new_animation 2s linear 1.5s forwards;
+}
+@keyframes new_animations{
+    0%{
+        right: -100px;
+    }
+    40%{
+        right: 400px;
+    }
+    90%{
+        right: 470px;
+    }
+    100%{
+        right: 400px;
+    }
+}
+
+
+
+}
